@@ -1,5 +1,9 @@
 ---
 import LogoHeader from "@/components/home/header";
+import Subtitle from "@/components/home/subtitle";
+import Instructions from "@/components/home/instructions";
+import ActionButtons from "@/components/home/buttons";
+import Layout from "@/layouts/Layout.astro";
 import "@/styles/globals.css";
 ---
 
@@ -12,6 +16,8 @@ import "@/styles/globals.css";
     <title>Astro</title>
   </head>
   <body>
-    <LogoHeader />
+    <Layout>
+      <LogoHeader />
+    </Layout>
   </body>
 </html>

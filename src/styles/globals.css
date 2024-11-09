@@ -70,4 +70,6 @@ body {
   box-shadow: 0 0 15px 4px rgba(255, 0, 0, 0.1) inset; /* Blurred red border */
   width: 100vw;
   min-height: 100vh;
+  padding: 20px;
+  background-image: src("public/Mesh.png");
 }
