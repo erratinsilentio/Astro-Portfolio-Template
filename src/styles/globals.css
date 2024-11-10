@@ -94,67 +94,129 @@ body {
     transform: translateY(-6px);
   }
 }
-/* Body Animation */
+
+/* Particle Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100px) translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Original Gradient Shift */
 @keyframes subtleShift {
   0% {
     background-image: radial-gradient(
         at 5% 23%,
-        rgb(17, 24, 39) 0%,
+        rgb(17, 24, 39) 0,
         transparent 100%
       ),
-      radial-gradient(at 29% 35%, rgba(134, 25, 143, 0.7) 0%, transparent 57%),
-      radial-gradient(at 100% 44%, rgb(0, 0, 0) 0%, transparent 100%),
-      radial-gradient(
-        at 0% 42%,
-        rgba(0, 255, 229, 0.2) 0%,
-        /* Teal accent */ transparent 46%
-      );
+      radial-gradient(at 29% 35%, rgba(134, 25, 143, 0.7) 0, transparent 57%),
+      radial-gradient(at 100% 44%, rgb(0, 0, 0) 0, transparent 100%),
+      radial-gradient(at 0% 42%, rgba(217, 249, 157, 0.3) 0, transparent 46%);
   }
-  50% {
+  33% {
     background-image: radial-gradient(
         at 8% 25%,
-        rgb(17, 24, 39) 0%,
+        rgb(17, 24, 39) 0,
         transparent 100%
       ),
-      radial-gradient(at 32% 38%, rgba(134, 25, 143, 0.5) 0%, transparent 57%),
-      radial-gradient(at 97% 46%, rgb(0, 0, 0) 0%, transparent 100%),
-      radial-gradient(
-        at 3% 40%,
-        rgba(0, 255, 229, 0.4) 0%,
-        /* Brighter teal */ transparent 46%
-      );
+      radial-gradient(at 32% 38%, rgba(134, 25, 143, 0.7) 0, transparent 57%),
+      radial-gradient(at 97% 46%, rgb(0, 0, 0) 0, transparent 100%),
+      radial-gradient(at 3% 40%, rgba(217, 249, 157, 0.3) 0, transparent 46%);
+  }
+  66% {
+    background-image: radial-gradient(
+        at 3% 20%,
+        rgb(17, 24, 39) 0,
+        transparent 100%
+      ),
+      radial-gradient(at 26% 32%, rgba(134, 25, 143, 0.7) 0, transparent 57%),
+      radial-gradient(at 103% 42%, rgb(0, 0, 0) 0, transparent 100%),
+      radial-gradient(at -2% 44%, rgba(217, 249, 157, 0.3) 0, transparent 46%);
   }
   100% {
     background-image: radial-gradient(
         at 5% 23%,
-        rgb(17, 24, 39) 0%,
+        rgb(17, 24, 39) 0,
         transparent 100%
       ),
-      radial-gradient(at 29% 35%, rgba(134, 25, 143, 0.7) 0%, transparent 57%),
-      radial-gradient(at 100% 44%, rgb(0, 0, 0) 0%, transparent 100%),
-      radial-gradient(
-        at 0% 42%,
-        rgba(0, 255, 229, 0.2) 0%,
-        /* Teal accent */ transparent 46%
-      );
+      radial-gradient(at 29% 35%, rgba(134, 25, 143, 0.7) 0, transparent 57%),
+      radial-gradient(at 100% 44%, rgb(0, 0, 0) 0, transparent 100%),
+      radial-gradient(at 0% 42%, rgba(217, 249, 157, 0.3) 0, transparent 46%);
   }
 }
 
 .animated-bg {
-  background-color: rgb(17, 24, 39); /* Darker base color */
+  position: relative;
+  background-color: rgb(17, 24, 39);
   background-image: radial-gradient(
       at 5% 23%,
-      rgb(17, 24, 39) 0%,
+      rgb(17, 24, 39) 0,
       transparent 100%
     ),
-    radial-gradient(at 29% 35%, rgba(134, 25, 143, 0.7) 0%, transparent 57%),
-    radial-gradient(at 100% 44%, rgb(0, 0, 0) 0%, transparent 100%),
-    radial-gradient(
-      at 0% 42%,
-      rgba(0, 255, 229, 0.2) 0%,
-      /* Teal accent */ transparent 46%
-    );
+    radial-gradient(at 29% 35%, rgba(134, 25, 143, 0.7) 0, transparent 57%),
+    radial-gradient(at 100% 44%, rgb(0, 0, 0) 0, transparent 100%),
+    radial-gradient(at 0% 42%, rgba(217, 249, 157, 0.3) 0, transparent 46%);
   animation: subtleShift 15s ease-in-out infinite;
   background-size: 200% 200%;
   background-position: 0% 0%;
+  overflow: hidden;
+}
+
+/* Particle elements */
+.animated-bg::before,
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.animated-bg::before {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 40%
+  );
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.animated-bg::after {
+  background: radial-gradient(
+    2px 2px at 50% 50%,
+    rgba(255, 255, 255, 0.2) 100%,
+    transparent 100%
+  );
+  mask-image: repeating-linear-gradient(
+    0deg,
+    transparent 0%,
+    transparent 98%,
+    white 100%
+  );
+  animation: float 8s ease-in-out infinite;
 }
