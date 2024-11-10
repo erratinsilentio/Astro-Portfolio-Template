@@ -1,8 +1,14 @@
 export default function Instructions() {
   return (
-    <ol className="text-zinc-100 list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-      <li className="mb-3">Type out a question that has been on your mind</li>
-      <li className="mb-2">Our AI interprets the cards drawn for you</li>
-    </ol>
+    <ul className="text-purple-200 pt-4 list-inside  text-sm text-center sm:text-left font-courier leading-6 tracking-tight">
+      <li className="mb-2 flex items-center gap-3">
+        <span className="text-[22px]">⚜️</span>Working on the frontend but
+        interested in all kinds of tech
+      </li>
+      <li className="mb-2 flex items-center gap-2">
+        <span className="text-[22px]">⚜️</span>Im always ready to put in the
+        work - smart & hard
+      </li>
+    </ul>
   );
 }
