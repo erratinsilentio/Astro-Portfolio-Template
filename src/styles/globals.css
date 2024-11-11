@@ -70,18 +70,9 @@ body {
   box-shadow: 0 0 15px 4px rgba(255, 0, 0, 0.1) inset; /* Blurred red border */
   width: 100vw;
   min-height: 100vh;
-  padding: 20px;
-  background-image: src("public/Mesh.png");
+  padding: 0px;
 
-  background-color: rgb(31, 41, 55);
-  background-image: radial-gradient(
-      at 5% 23%,
-      rgb(31, 41, 55) 0,
-      transparent 100%
-    ),
-    radial-gradient(at 29% 35%, rgb(134, 25, 143) 0, transparent 57%),
-    radial-gradient(at 100% 44%, rgb(0, 0, 0) 0, transparent 100%),
-    radial-gradient(at 0% 42%, rgb(217, 249, 157) 0, transparent 46%);
+  background-color: rgb(18, 26, 36);
 }
 
 /* Letters Animation */

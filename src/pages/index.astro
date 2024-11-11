@@ -1,9 +1,7 @@
 ---
-import LogoHeader from "@/components/home/header";
-import Instructions from "@/components/home/instructions";
-import Layout from "@/layouts/Layout.astro";
-import Buttons from "@/components/home/buttons.astro";
 import "@/styles/globals.css";
+import Home from "@/components/home/index.astro";
+import Page from "@/components/page-two/index.astro";
 ---
 
 <html lang="en">
@@ -14,11 +12,8 @@ import "@/styles/globals.css";
     <meta name="generator" content={Astro.generator} />
     <title>erratinsilentio</title>
   </head>
-  <body class="animated-bg">
-    <Layout>
-      <LogoHeader />
-      <Instructions />
-      <Buttons />
-    </Layout>
+  <body class="flex flex-col">
+    <Home />
+    <Page />
   </body>
 </html>
