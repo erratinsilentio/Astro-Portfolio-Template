@@ -6,7 +6,7 @@ export default function LogoHeader() {
         <section>
           <section className="overflow-hidden">
             <div className="animate-slide-up">
-              <h1 className="animate-gradient-bg tracking-wide text-center sm:text-left text-[44px] sm:text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-300 to-indigo-300">
+              <h1 className="animate-gradient-bg animate-fade-in tracking-wide text-center sm:text-left text-[44px] sm:text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-300 to-indigo-300">
                 erratinsilentio.dev
               </h1>
             </div>
