@@ -149,3 +149,21 @@ body {
   background-size: 200% 200%;
   background-position: 0% 0%;
 }
+
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  background-image: linear-gradient(to right, #7f5af0, #f8a5d4, #6366f1);
+  animation: gradient-bg 10s ease infinite;
+}

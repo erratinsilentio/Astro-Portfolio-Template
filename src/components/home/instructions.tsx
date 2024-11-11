@@ -8,11 +8,13 @@ export default function Instructions() {
       <li className="mb-2 flex items-center gap-3">
         <span className="text-[22px] text-yellow-600">⚜️</span>Always ready to
         put in the work - both{" "}
-        <span className="underline tracking-wider ring-offset-amber-800">
+        <span className="underline tracking-wider cursor-pointer hover:text-purple-400">
           smart
         </span>
         <span className="text-[18px] font">&</span>
-        <span className="underline tracking-wider">hard</span>
+        <span className="underline tracking-wider cursor-pointer hover:text-purple-400">
+          hard
+        </span>
       </li>
     </ul>
   );

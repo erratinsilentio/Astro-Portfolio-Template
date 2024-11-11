@@ -3,9 +3,9 @@ export default function LogoHeader() {
     <div className=" flex flex-col items-center justify-center sm:flex-row sm:items-end">
       <div className="flex flex-col items-center justify-center sm:flex-row sm:items-center">
         {/* <img src="/Ball.png" alt="Tarot Reader logo" width={130} /> */}
-        <span className="text-[120px] leading-8 mr-6">👾</span>
+        <span className="text-[120px] leading-8 mr-6 brightness-125">👾</span>
         <section className="">
-          <h1 className=" tracking-wide text-center sm:text-left text-[44px] sm:text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-300 to-indigo-300">
+          <h1 className="animate-gradient-bg tracking-wide text-center sm:text-left text-[44px] sm:text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-300 to-indigo-300">
             erratinsilentio.dev
           </h1>
           <span className=" text-[20px] text-center font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700">
