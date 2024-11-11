@@ -1,0 +1,52 @@
+---
+const logoText = "👾";
+const mainTitle = "erratinsilentio";
+const subTitle = "Creative Web Developer";
+---
+
+<div class="flex flex-col items-center justify-center sm:flex-row sm:items-end">
+  <div
+    class="flex flex-col items-center justify-center sm:flex-row sm:items-center"
+  >
+    <span
+      class="text-[150px] sm:text-[120px] leading-8 mb-16 sm:mr-6 sm:mb-0 brightness-125 logo-animation"
+    >
+      {logoText}
+    </span>
+
+    <section class="flex flex-col justify-center items-center sm:items-start">
+      <section class="overflow-hidden">
+        <div class="animate-slide-up">
+          <h1
+            class="animate-gradient-bg animate-fade-in tracking-wide text-center sm:text-left text-[55px] sm:text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-300 to-indigo-300"
+          >
+            {mainTitle}
+          </h1>
+        </div>
+      </section>
+
+      <span
+        class="text-[25px] sm:text-[20px] animate-fade-in text-center font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700"
+      >
+        {subTitle}
+      </span>
+    </section>
+  </div>
+</div>
+
+<style>
+  @keyframes logo-bounce {
+    0%,
+    100% {
+      transform: translateY(-2px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .logo-animation {
+    animation: logo-bounce 1.5s ease-in-out infinite;
+    transition: transform 0.2s ease-in-out;
+  }
+</style>
