@@ -9,7 +9,7 @@ const subTitle = "Creative Web Developer";
     class="flex flex-col items-center justify-center sm:flex-row sm:items-center"
   >
     <span
-      class="text-[150px] sm:text-[120px] leading-8 mb-16 sm:mr-6 sm:mb-0 brightness-125 logo-animation"
+      class="text-[150px] sm:text-[120px] leading-8 mb-16 sm:mr-6 sm:mb-0 brightness-125 logo-slide-bounce"
     >
       {logoText}
     </span>
@@ -35,18 +35,30 @@ const subTitle = "Creative Web Developer";
 </div>
 
 <style>
-  @keyframes logo-bounce {
-    0%,
-    100% {
-      transform: translateY(-2px);
+  @keyframes slide-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
     }
-    50% {
-      transform: translateY(-12px);
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  .logo-animation {
-    animation: logo-bounce 1.5s ease-in-out infinite;
-    transition: transform 0.2s ease-in-out;
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .logo-slide-bounce {
+    animation:
+      slide-down 0.75s ease-out forwards,
+      bounce 1.5s ease-in-out 0.75s infinite;
   }
 </style>
