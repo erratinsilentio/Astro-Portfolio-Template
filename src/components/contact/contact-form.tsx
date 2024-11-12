@@ -95,22 +95,27 @@ export default function ContactForm() {
           </Card>
           <Card className="w-full sm:w-2/5 border-purple-500/20 bg-transparent backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="text-purple-300">Recent Messages</CardTitle>
+              <CardTitle className="text-purple-300">
+                Contact Information
+              </CardTitle>
               <CardDescription className="text-purple-300/60">
-                Your latest interactions
+                For further inquiries
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-4">
                 {[
                   {
-                    name: "Alice Johnson",
-                    message: "Great work on the last project!",
+                    name: "Email",
+                    message: "kacper.kondracki@wp.pl",
                   },
-                  { name: "Bob Smith", message: "Can we schedule a call?" },
                   {
-                    name: "Charlie Brown",
-                    message: "I have a new project idea.",
+                    name: "Address",
+                    message: "Aleja Wojska Polskiego 37, 01-503 Warszawa",
+                  },
+                  {
+                    name: "Phone Number",
+                    message: "(+48) 512 275 635",
                   },
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-4">
@@ -125,14 +130,37 @@ export default function ContactForm() {
                 ))}
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button
-                variant="ghost"
-                className="w-full text-purple-300 hover:text-purple-100 hover:bg-purple-500/20"
-              >
-                View All Messages <ChevronRight className="ml-2 h-4 w-4" />
-              </Button>
+            <CardFooter className="flex flex-col items-start gap-1 pt-4">
+              <CardTitle className="text-purple-300">
+                Social Media Links
+              </CardTitle>
+              <CardDescription className="text-purple-300/60">
+                For additional contact
+              </CardDescription>
             </CardFooter>
+            <section className="flex flex-row justify-evenly pt-2">
+              <a href="">
+                <img
+                  src="/logos/Github.svg"
+                  alt="Github Logo"
+                  className="w-14"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="/logos/LinkedIn.svg"
+                  alt="LinkedIn Logo"
+                  className="w-14"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="/logos/Facebook.svg"
+                  alt="Facebook Logo"
+                  className="w-14"
+                />
+              </a>
+            </section>
           </Card>
         </div>
       </div>
