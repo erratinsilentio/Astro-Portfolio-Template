@@ -1,6 +1,6 @@
 ---
 import ContactForm from "@/components/contact/contact-form";
-import Layout from "@/layouts/Layout.astro";
+import ContactPageLayout from "@/layouts/ContactPageLayout.astro";
 import "@/styles/globals.css";
 ---
 
@@ -13,6 +13,8 @@ import "@/styles/globals.css";
     <title>erratinsilentio</title>
   </head>
   <body class="flex flex-col">
-    <ContactForm client:only="react" />
+    <ContactPageLayout>
+      <ContactForm client:only="react" />
+    </ContactPageLayout>
   </body>
 </html>

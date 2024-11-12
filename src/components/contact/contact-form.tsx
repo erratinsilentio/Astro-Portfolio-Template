@@ -12,7 +12,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import Header from "../home/header.astro";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -26,13 +25,14 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0c0c16] p-8">
+    <div className="min-h-screen bg-transparent p-8">
       <div className="max-w-7xl mx-auto space-y-8">
-        <h1 className="text-3xl font-bold text-purple-300">
-          Contact Dashboard
+        <h1 className="text-3xl font-bold text-purple-300 flex items-center gap-2">
+          <span className="text-[40px] logo-slide-bounce-sm">👾</span>{" "}
+          erratinsilentio
         </h1>
         <div className="flex flex-col sm:flex-row gap-2">
-          <Card className="w-full border-purple-500/20 bg-[#0c0c16]/90 backdrop-blur-sm">
+          <Card className="w-full border-purple-500/20 bg-transparent backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-purple-300">
                 Let&apos;s Work Together
@@ -93,7 +93,7 @@ export default function ContactForm() {
               </form>
             </CardContent>
           </Card>
-          <Card className="w-full sm:w-2/5 border-purple-500/20 bg-[#0c0c16]/90 backdrop-blur-sm">
+          <Card className="w-full sm:w-2/5 border-purple-500/20 bg-transparent backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-purple-300">Recent Messages</CardTitle>
               <CardDescription className="text-purple-300/60">
