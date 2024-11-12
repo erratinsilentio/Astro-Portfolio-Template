@@ -9,5 +9,5 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind({ applyBaseStyles: false }), solidJs(), react()],
+  integrations: [tailwind({ applyBaseStyles: false }), react()],
 });
