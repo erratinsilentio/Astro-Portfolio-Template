@@ -1,6 +1,8 @@
 ---
 import "@/styles/globals.css";
 import ContactPage from "@/components/contact/index.astro";
+import { META_TITLE, META_DESCRIPTION } from "data";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -9,7 +11,9 @@ import ContactPage from "@/components/contact/index.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content="{Astro.generator}" />
-    <title>erratinsilentio</title>
+    <title>{META_TITLE}</title>
+    <meta name="description" content="{META_DESCRIPTION}" />
+    <ViewTransitions />
   </head>
   <body class="flex flex-col">
     <ContactPage />

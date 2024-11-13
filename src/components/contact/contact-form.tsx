@@ -14,13 +14,11 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
   EMAIL_ADDRESS,
-  FACEBOOK_LINK,
-  GITHUB_LINK,
   CONTACT_HEADER_TITLE,
   CONTACT_HEADER_LOGO,
   HOME_ADDRESS,
-  LINKEDIN_LINK,
   PHONE_NUMBER,
+  SOCIAL_MEDIA_LINKS,
 } from "data";
 
 export default function ContactForm() {
@@ -151,36 +149,18 @@ export default function ContactForm() {
               </CardDescription>
             </CardFooter>
             <section className="flex flex-row justify-evenly pt-2">
-              <a
-                href={GITHUB_LINK}
-                className="flex h-16 w-16 items-center justify-center"
-              >
-                <img
-                  src="/logos/Github.svg"
-                  alt="Github Logo"
-                  className="w-14 transition-transform duration-200 hover:scale-125 hover:brightness-125"
-                />
-              </a>
-              <a
-                href={LINKEDIN_LINK}
-                className="flex h-16 w-16 items-center justify-center"
-              >
-                <img
-                  src="/logos/LinkedIn.svg"
-                  alt="LinkedIn Logo"
-                  className="w-14 transition-transform duration-200 hover:scale-125 hover:brightness-125"
-                />
-              </a>
-              <a
-                href={FACEBOOK_LINK}
-                className="flex h-16 w-16 items-center justify-center"
-              >
-                <img
-                  src="/logos/Facebook.svg"
-                  alt="Facebook Logo"
-                  className="w-14 transition-transform duration-200 hover:scale-125 hover:brightness-125"
-                />
-              </a>
+              {SOCIAL_MEDIA_LINKS.map(({ provider, link, icon }) => (
+                <a
+                  href={link}
+                  className="flex h-16 w-16 items-center justify-center"
+                >
+                  <img
+                    src={`/logos/${icon}`}
+                    alt={provider}
+                    className="w-14 transition-transform duration-200 hover:scale-125 hover:brightness-125"
+                  />
+                </a>
+              ))}
             </section>
           </Card>
         </div>

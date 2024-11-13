@@ -18,41 +18,13 @@ import {
 } from "@/components/ui/carousel";
 
 // Assuming these constants are defined in your data file
-import { ABOUT_HEADER_LOGO, ABOUT_HEADER_TITLE } from "data";
-
-// Mock data for projects
-const projects = [
-  {
-    title: "Project Alpha",
-    description: "A revolutionary AI-powered task management system",
-    image: "Mesh.png",
-    link: "https://example.com/project-alpha",
-  },
-  {
-    title: "Project Beta",
-    description: "Blockchain-based supply chain solution",
-    image: "/Mesh.png",
-    link: "https://example.com/project-beta",
-  },
-  {
-    title: "Project Gamma",
-    description: "IoT platform for smart home automation",
-    image: "Mesh.png",
-    link: "https://example.com/project-gamma",
-  },
-  {
-    title: "Project Delta",
-    description: "Machine learning model for predictive maintenance",
-    image: "Mesh.png",
-    link: "https://example.com/project-delta",
-  },
-];
+import { ABOUT_HEADER_LOGO, ABOUT_HEADER_TITLE, PROJECTS } from "data";
 
 export default function ProjectShowcase() {
   const [activeProject, setActiveProject] = useState(0);
 
   return (
-    <div className="bg-transparent p-8">
+    <div className="min-h-screen bg-transparent p-8">
       <div className="mx-auto max-w-7xl space-y-8">
         <h1 className="flex items-center justify-center gap-2 text-3xl text-[40px] font-bold tracking-wider text-purple-300 sm:justify-start sm:text-[1.875rem] sm:tracking-normal">
           <span className="logo-slide-bounce-sm text-[50px] brightness-125 sm:text-[40px]">
@@ -73,7 +45,7 @@ export default function ProjectShowcase() {
             <CardContent>
               <Carousel className="mx-auto w-full max-w-4xl">
                 <CarouselContent>
-                  {projects.map((project, index) => (
+                  {PROJECTS.map((project, index) => (
                     <CarouselItem key={index}>
                       <div className="p-1">
                         <Card className="border-purple-500/20 bg-purple-950/20">
@@ -118,7 +90,7 @@ export default function ProjectShowcase() {
         <div className="mb-4 flex flex-col items-center justify-between sm:flex-row">
           <Button
             variant="default"
-            className="flex h-10 w-full items-center justify-center border border-solid border-purple-600/[.345] bg-purple-900 px-4 font-thin text-zinc-100 transition-colors hover:border-pink-100/[0.250] hover:bg-[#1a1a1a] hover:text-white sm:h-8 sm:w-[150px] sm:px-2 sm:text-base"
+            className="mb-3 flex h-10 w-full items-center justify-center border border-solid border-purple-600/[.345] bg-purple-900 px-4 font-thin text-zinc-100 transition-colors hover:border-pink-100/[0.250] hover:bg-[#1a1a1a] hover:text-white sm:mb-0 sm:h-8 sm:w-[150px] sm:px-2 sm:text-base"
           >
             <a href="/" className="w-[150px]">
               Back to Home
