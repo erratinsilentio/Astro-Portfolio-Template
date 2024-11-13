@@ -1,7 +1,5 @@
 ---
-const logoText = "👾";
-const mainTitle = "erratinsilentio";
-const subTitle = "Creative Web Developer";
+import { HOME_LOGO, HOME_HEADER_TITLE, HOME_HEADER_SUBTITLE } from "data";
 ---
 
 <div class="flex flex-col items-center justify-center sm:flex-row sm:items-end">
@@ -11,7 +9,7 @@ const subTitle = "Creative Web Developer";
     <span
       class="text-[150px] sm:text-[120px] leading-8 mb-16 sm:mr-6 sm:mb-0 brightness-125 logo-slide-bounce"
     >
-      {logoText}
+      {HOME_LOGO}
     </span>
 
     <section class="flex flex-col justify-center items-center sm:items-start">
@@ -20,7 +18,7 @@ const subTitle = "Creative Web Developer";
           <h1
             class="animate-gradient-bg animate-fade-in tracking-wide text-center sm:text-left text-[55px] sm:text-[50px] font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-300 to-indigo-300"
           >
-            {mainTitle}
+            {HOME_HEADER_TITLE}
           </h1>
         </div>
       </section>
@@ -28,7 +26,7 @@ const subTitle = "Creative Web Developer";
       <span
         class="kanit-extralight text-[25px] sm:text-[20px] animate-fade-in text-center font-[family-name:var(--font-geist-mono)] bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-purple-500 to-purple-700"
       >
-        {subTitle}
+        {HOME_HEADER_SUBTITLE}
       </span>
     </section>
   </div>

@@ -12,6 +12,16 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import {
+  EMAIL_ADDRESS,
+  FACEBOOK_LINK,
+  GITHUB_LINK,
+  CONTACT_HEADER_TITLE,
+  CONTACT_HEADER_LOGO,
+  HOME_ADDRESS,
+  LINKEDIN_LINK,
+  PHONE_NUMBER,
+} from "data";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,8 +38,10 @@ export default function ContactForm() {
     <div className="min-h-screen bg-transparent p-8">
       <div className="mx-auto max-w-7xl space-y-8">
         <h1 className="flex items-center gap-2 text-3xl font-bold text-purple-300">
-          <span className="logo-slide-bounce-sm text-[40px]">👾</span>{" "}
-          erratinsilentio
+          <span className="logo-slide-bounce-sm text-[40px] brightness-125">
+            {CONTACT_HEADER_LOGO}
+          </span>{" "}
+          {CONTACT_HEADER_TITLE}
         </h1>
         <div className="animate-fade-in flex flex-col gap-2 sm:flex-row">
           <Card className="w-full border-purple-500/20 bg-transparent backdrop-blur-sm">
@@ -107,15 +119,15 @@ export default function ContactForm() {
                 {[
                   {
                     name: "Email",
-                    message: "kacper.kondracki@wp.pl",
+                    message: EMAIL_ADDRESS,
                   },
                   {
                     name: "Address",
-                    message: "Aleja Wojska Polskiego 37, 01-503 Warszawa",
+                    message: HOME_ADDRESS,
                   },
                   {
                     name: "Phone Number",
-                    message: "(+48) 512 275 635",
+                    message: PHONE_NUMBER,
                   },
                 ].map((item, index) => (
                   <li key={index} className="flex items-start space-x-4">
@@ -139,25 +151,34 @@ export default function ContactForm() {
               </CardDescription>
             </CardFooter>
             <section className="flex flex-row justify-evenly pt-2">
-              <a href="">
+              <a
+                href={GITHUB_LINK}
+                className="flex h-16 w-16 items-center justify-center"
+              >
                 <img
                   src="/logos/Github.svg"
                   alt="Github Logo"
-                  className="w-14"
+                  className="w-14 transition-transform duration-200 hover:scale-125 hover:brightness-125"
                 />
               </a>
-              <a href="">
+              <a
+                href={LINKEDIN_LINK}
+                className="flex h-16 w-16 items-center justify-center"
+              >
                 <img
                   src="/logos/LinkedIn.svg"
                   alt="LinkedIn Logo"
-                  className="w-14"
+                  className="w-14 transition-transform duration-200 hover:scale-125 hover:brightness-125"
                 />
               </a>
-              <a href="">
+              <a
+                href={FACEBOOK_LINK}
+                className="flex h-16 w-16 items-center justify-center"
+              >
                 <img
                   src="/logos/Facebook.svg"
                   alt="Facebook Logo"
-                  className="w-14"
+                  className="w-14 transition-transform duration-200 hover:scale-125 hover:brightness-125"
                 />
               </a>
             </section>
@@ -166,7 +187,7 @@ export default function ContactForm() {
         <a href="/" className="text-[50px]">
           <Button
             variant={"default"}
-            className="mt-4 flex h-8 w-[150px] items-center justify-center border border-solid border-purple-800/[.345] bg-transparent px-4 font-thin text-zinc-100 transition-colors hover:border-pink-100/[0.250] hover:bg-[#1a1a1a] hover:text-white sm:px-2 sm:text-base"
+            className="mt-4 flex h-8 w-[150px] items-center justify-center border border-solid border-purple-600/[.345] bg-purple-900 px-4 font-thin text-zinc-100 transition-colors hover:border-pink-100/[0.250] hover:bg-[#1a1a1a] hover:text-white sm:px-2 sm:text-base"
           >
             Back
           </Button>

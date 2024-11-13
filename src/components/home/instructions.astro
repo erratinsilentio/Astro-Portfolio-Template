@@ -1,18 +1,12 @@
 ---
-const instructions = [
-  {
-    icon: "⚜️",
-    text: "Working on the Frontend, interested in all kinds of tech",
-  },
-  { icon: "⚜️", text: "Always ready to put in the work - both smart & hard" },
-];
+import { INSTRUCTIONS } from "data";
 ---
 
 <ul
   class="text-purple-200 pt-4 list-inside text-sm text-left font-courier leading-6 tracking-tight shadows-into-light-regular"
 >
   {
-    instructions.map((instruction) => (
+    INSTRUCTIONS.map((instruction) => (
       <li class="mb-3 sm:mb-2 flex items-start sm:items-center gap-3">
         <span class="text-[22px] text-yellow-600">{instruction.icon}</span>
         {instruction.text}
