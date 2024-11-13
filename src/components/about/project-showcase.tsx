@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -21,8 +20,6 @@ import {
 import { ABOUT_HEADER_LOGO, ABOUT_HEADER_TITLE, PROJECTS } from "data";
 
 export default function ProjectShowcase() {
-  const [activeProject, setActiveProject] = useState(0);
-
   return (
     <div className="min-h-screen bg-transparent p-8">
       <div className="mx-auto max-w-7xl space-y-8">
@@ -30,7 +27,7 @@ export default function ProjectShowcase() {
           <span className="logo-slide-bounce-sm text-[40px] brightness-125">
             {ABOUT_HEADER_LOGO}
           </span>{" "}
-          {ABOUT_HEADER_TITLE}
+          <span className="animate-fade-in">{ABOUT_HEADER_TITLE}</span>
         </h1>
         <div className="animate-fade-in">
           <Card className="border-purple-500/20 bg-transparent backdrop-blur-sm">

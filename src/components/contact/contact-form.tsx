@@ -38,8 +38,8 @@ export default function ContactForm() {
         <h1 className="flex items-center justify-center gap-2 text-3xl font-bold text-purple-300 sm:justify-start">
           <span className="logo-slide-bounce-sm text-[40px] brightness-125">
             {CONTACT_HEADER_LOGO}
-          </span>{" "}
-          {CONTACT_HEADER_TITLE}
+          </span>
+          <span className="animate-fade-in">{CONTACT_HEADER_TITLE}</span>
         </h1>
         <div className="animate-fade-in flex flex-col gap-2 sm:flex-row">
           <Card className="w-full border-purple-500/20 bg-transparent backdrop-blur-sm">
