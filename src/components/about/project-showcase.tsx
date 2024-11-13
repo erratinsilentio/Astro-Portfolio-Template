@@ -16,8 +16,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-// Assuming these constants are defined in your data file
 import { ABOUT_HEADER_LOGO, ABOUT_HEADER_TITLE, PROJECTS } from "data";
 
 export default function ProjectShowcase() {
@@ -28,7 +26,9 @@ export default function ProjectShowcase() {
           <span className="logo-slide-bounce-sm text-[40px] brightness-125">
             {ABOUT_HEADER_LOGO}
           </span>{" "}
-          <span className="animate-fade-in">{ABOUT_HEADER_TITLE}</span>
+          <a href="/" className="animate-fade-in">
+            {ABOUT_HEADER_TITLE}
+          </a>
         </h1>
         <div className="animate-fade-in">
           <Card className="border-purple-500/20 bg-transparent backdrop-blur-sm">

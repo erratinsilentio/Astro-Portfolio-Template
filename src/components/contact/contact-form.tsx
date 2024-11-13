@@ -39,7 +39,9 @@ export default function ContactForm() {
           <span className="logo-slide-bounce-sm text-[40px] brightness-125">
             {CONTACT_HEADER_LOGO}
           </span>
-          <span className="animate-fade-in">{CONTACT_HEADER_TITLE}</span>
+          <a href="/" className="animate-fade-in">
+            {CONTACT_HEADER_TITLE}
+          </a>
         </h1>
         <div className="animate-fade-in flex flex-col gap-2 sm:flex-row">
           <Card className="w-full border-purple-500/20 bg-transparent backdrop-blur-sm">
