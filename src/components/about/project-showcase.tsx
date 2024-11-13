@@ -1,3 +1,4 @@
+import { Image } from "astro:assets";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -50,6 +51,8 @@ export default function ProjectShowcase() {
                             <img
                               src={project.image}
                               alt={project.title}
+                              loading="lazy"
+                              decoding="async"
                               className="aspect-[16/9] w-full rounded-t-lg object-cover"
                             />
                           </CardHeader>
