@@ -150,7 +150,7 @@ export default function ContactForm() {
                 For additional contact
               </CardDescription>
             </CardFooter>
-            <section className="flex flex-row justify-evenly pt-2">
+            <section className="mb-6 flex flex-row justify-evenly pt-2 sm:mb-2">
               {SOCIAL_MEDIA_LINKS.map(({ provider, link, icon }) => (
                 <a
                   href={link}
