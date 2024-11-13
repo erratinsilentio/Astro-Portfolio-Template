@@ -35,9 +35,9 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent p-8">
+    <div className="min-h-screen bg-transparent p-4 sm:p-8">
       <div className="mx-auto max-w-7xl space-y-8">
-        <h1 className="flex items-center gap-2 text-3xl font-bold text-purple-300">
+        <h1 className="flex items-center justify-center gap-2 text-3xl font-bold text-purple-300 sm:justify-start">
           <span className="logo-slide-bounce-sm text-[40px] brightness-125">
             {CONTACT_HEADER_LOGO}
           </span>{" "}
@@ -184,14 +184,14 @@ export default function ContactForm() {
             </section>
           </Card>
         </div>
-        <a href="/" className="text-[50px]">
-          <Button
-            variant={"default"}
-            className="mt-4 flex h-8 w-[150px] items-center justify-center border border-solid border-purple-600/[.345] bg-purple-900 px-4 font-thin text-zinc-100 transition-colors hover:border-pink-100/[0.250] hover:bg-[#1a1a1a] hover:text-white sm:px-2 sm:text-base"
-          >
-            Back
-          </Button>
-        </a>
+        <Button
+          variant={"default"}
+          className="mt-4 flex h-8 w-full items-center justify-center border border-solid border-purple-600/[.345] bg-purple-900 px-4 font-thin text-zinc-100 transition-colors hover:border-pink-100/[0.250] hover:bg-[#1a1a1a] hover:text-white sm:w-[150px] sm:px-2 sm:text-base"
+        >
+          <a href="/" className="w-full sm:w-[150px]">
+            Back To Home
+          </a>
+        </Button>
       </div>
     </div>
   );

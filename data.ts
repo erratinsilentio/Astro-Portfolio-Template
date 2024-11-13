@@ -22,3 +22,7 @@ export const PHONE_NUMBER = "(+48) 512 275 635";
 export const FACEBOOK_LINK = "https://www.facebook.com/kacper.kondracki";
 export const GITHUB_LINK = "https://github.com/erratinsilentio";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/kacperkondracki/";
+
+// About Page
+export const ABOUT_HEADER_LOGO = "👾";
+export const ABOUT_HEADER_TITLE = "erratinsilentio";
