@@ -1,7 +1,6 @@
 ---
-import ContactPageLayout from "@/layouts/ContactPageLayout.astro";
-import ProjectShowcase from "@/components/about/project-showcase";
 import "@/styles/globals.css";
+import AboutPage from "@/components/about/index.astro";
 ---
 
 <html lang="en">
@@ -13,8 +12,6 @@ import "@/styles/globals.css";
     <title>erratinsilentio</title>
   </head>
   <body class="flex flex-col">
-    <ContactPageLayout>
-      <ProjectShowcase client:only="react" />
-    </ContactPageLayout>
+    <AboutPage />
   </body>
 </html>

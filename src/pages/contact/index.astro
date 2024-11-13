@@ -1,7 +1,6 @@
 ---
-import ContactForm from "@/components/contact/contact-form";
-import ContactPageLayout from "@/layouts/ContactPageLayout.astro";
 import "@/styles/globals.css";
+import ContactPage from "@/components/contact/index.astro";
 ---
 
 <html lang="en">
@@ -9,12 +8,10 @@ import "@/styles/globals.css";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+    <meta name="generator" content="{Astro.generator}" />
     <title>erratinsilentio</title>
   </head>
   <body class="flex flex-col">
-    <ContactPageLayout>
-      <ContactForm client:only="react" />
-    </ContactPageLayout>
+    <ContactPage />
   </body>
 </html>
