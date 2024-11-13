@@ -26,12 +26,12 @@ export default function ContactForm() {
 
   return (
     <div className="min-h-screen bg-transparent p-8">
-      <div className="max-w-7xl mx-auto space-y-8">
-        <h1 className="text-3xl font-bold text-purple-300 flex items-center gap-2">
-          <span className="text-[40px] logo-slide-bounce-sm">👾</span>{" "}
+      <div className="mx-auto max-w-7xl space-y-8">
+        <h1 className="flex items-center gap-2 text-3xl font-bold text-purple-300">
+          <span className="logo-slide-bounce-sm text-[40px]">👾</span>{" "}
           erratinsilentio
         </h1>
-        <div className="flex flex-col sm:flex-row gap-2">
+        <div className="animate-fade-in flex flex-col gap-2 sm:flex-row">
           <Card className="w-full border-purple-500/20 bg-transparent backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-purple-300">
@@ -93,7 +93,7 @@ export default function ContactForm() {
               </form>
             </CardContent>
           </Card>
-          <Card className="w-full sm:w-2/5 border-purple-500/20 bg-transparent backdrop-blur-sm">
+          <Card className="w-full border-purple-500/20 bg-transparent backdrop-blur-sm sm:w-2/5">
             <CardHeader>
               <CardTitle className="text-purple-300">
                 Contact Information
@@ -121,8 +121,8 @@ export default function ContactForm() {
                   <li key={index} className="flex items-start space-x-4">
                     <MessageSquare className="h-6 w-6 text-purple-400" />
                     <div>
-                      <p className="text-purple-200 font-medium">{item.name}</p>
-                      <p className="text-purple-300/60 text-sm">
+                      <p className="font-medium text-purple-200">{item.name}</p>
+                      <p className="text-sm text-purple-300/60">
                         {item.message}
                       </p>
                     </div>
@@ -163,6 +163,14 @@ export default function ContactForm() {
             </section>
           </Card>
         </div>
+        <a href="/" className="text-[50px]">
+          <Button
+            variant={"default"}
+            className="mt-4 flex h-8 w-[150px] items-center justify-center border border-solid border-purple-800/[.345] bg-transparent px-4 font-thin text-zinc-100 transition-colors hover:border-pink-100/[0.250] hover:bg-[#1a1a1a] hover:text-white sm:px-2 sm:text-base"
+          >
+            Back
+          </Button>
+        </a>
       </div>
     </div>
   );
