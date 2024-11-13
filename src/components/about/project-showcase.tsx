@@ -26,11 +26,11 @@ export default function ProjectShowcase() {
   return (
     <div className="min-h-screen bg-transparent p-8">
       <div className="mx-auto max-w-7xl space-y-8">
-        <h1 className="flex items-center justify-center gap-2 text-3xl text-[40px] font-bold tracking-wider text-purple-300 sm:justify-start sm:text-[1.875rem] sm:tracking-normal">
-          <span className="logo-slide-bounce-sm text-[50px] brightness-125 sm:text-[40px]">
+        <h1 className="flex items-center justify-center gap-2 text-3xl font-bold text-purple-300 sm:justify-start">
+          <span className="logo-slide-bounce-sm text-[40px] brightness-125">
             {ABOUT_HEADER_LOGO}
           </span>{" "}
-          <a href="/">{ABOUT_HEADER_TITLE}</a>
+          {ABOUT_HEADER_TITLE}
         </h1>
         <div className="animate-fade-in">
           <Card className="border-purple-500/20 bg-transparent backdrop-blur-sm">

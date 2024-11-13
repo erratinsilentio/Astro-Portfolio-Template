@@ -1,5 +1,5 @@
 // Meta Data
-export const META_TITLE = "erratinsilentio";
+export const META_TITLE = "erratinsilentio.dev";
 export const META_DESCRIPTION =
   "Creative Web Developer, Frontend Developer, Full Stack Developer";
 

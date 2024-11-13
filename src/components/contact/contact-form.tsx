@@ -33,7 +33,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-transparent p-4 sm:p-8">
+    <div className="min-h-screen bg-transparent p-8">
       <div className="mx-auto max-w-7xl space-y-8">
         <h1 className="flex items-center justify-center gap-2 text-3xl font-bold text-purple-300 sm:justify-start">
           <span className="logo-slide-bounce-sm text-[40px] brightness-125">
@@ -153,6 +153,7 @@ export default function ContactForm() {
                 <a
                   href={link}
                   className="flex h-16 w-16 items-center justify-center"
+                  key={provider}
                 >
                   <img
                     src={`/logos/${icon}`}
