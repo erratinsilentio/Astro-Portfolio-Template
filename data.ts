@@ -72,3 +72,5 @@ export const PROJECTS = [
     link: "https://example.com/project-delta",
   },
 ];
+
+// Email Configuration

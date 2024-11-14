@@ -61,6 +61,7 @@ export default function ContactForm() {
                   </Label>
                   <Input
                     id="name"
+                    name="name"
                     placeholder="Your name"
                     required
                     className="border-purple-500/20 bg-purple-950/20 text-purple-100 placeholder:text-purple-300/30"
@@ -72,6 +73,7 @@ export default function ContactForm() {
                   </Label>
                   <Input
                     id="email"
+                    name="email"
                     placeholder="your@email.com"
                     required
                     type="email"
@@ -84,6 +86,7 @@ export default function ContactForm() {
                   </Label>
                   <Textarea
                     id="message"
+                    name="message"
                     placeholder="Tell me about your project..."
                     required
                     className="min-h-[120px] border-purple-500/20 bg-purple-950/20 text-purple-100 placeholder:text-purple-300/30"
