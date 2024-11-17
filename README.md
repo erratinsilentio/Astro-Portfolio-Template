@@ -1,14 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
-    <img width=200px height=120px src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWJmaXMyMW8wMXA0aTdqejlqNWhjbDlsdHI2NDFjeXVpcnp3Z2ZrNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vybWlRniCXzZC/giphy.gif" alt="Project logo"></a>
+    <img width=200px height=120px src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.buttercms.com%2FxrVbfdR5TBy4iTaY4xl7&f=1&nofb=1&ipt=d9e88504f9119f814497c053b5f32ab114ca3e378cb07f9fc236d96beb3b66a1&ipo=images" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Astro Portfolio Template</h3>
-<p align="center" style="color: #000000">
-  <a href="#">
-    <img src="https://img.shields.io/badge/live_website-000?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Website"/>
-  </a>
-</p>
 
 <div align="center">
 
@@ -33,7 +28,9 @@
 - [Pages](#pages)
 - [Customization](#customization)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
+- [Contributing & Usage](#contributing)
+  - [Contributing](#contributing)
+  - [Usage](#usage)
 - [License](#license)
 
 ---
@@ -132,7 +129,7 @@ or
 yarn dev
 ```
 
-The application will now be accessible at http://localhost:3000.
+The application will now be accessible at http://localhost:4321.
 
 ## 📄 Pages
 
@@ -158,20 +155,27 @@ All the important content (e.g., name, bio, project details) is imported from th
     2. Edit the fields as needed. Example:
 
 ```ts
-export const portfolioData = {
-  name: 'John Doe',
-  title: 'Full Stack Developer',
-  about: 'Passionate developer creating scalable and user-friendly web applications.',
-  projects: [
-    {
-      name: 'Project Name',
-      description: 'A short description of the project.',
-      link: 'https://github.com/your-username/project',
-    },
-  ],
-  contactEmail: 'your-email@example.com',
-};
+// Meta Data
+export const META_TITLE = "erratinsilentio.dev";
+export const META_DESCRIPTION =
+  "Creative Web Developer, Frontend Developer, Full Stack Developer";
+
+// Home Page
+export const HOME_LOGO = "👾";
+export const HOME_HEADER_TITLE = "erratinsilentio";
+export const HOME_HEADER_SUBTITLE = "Creative Web Developer";
+
+export const INSTRUCTIONS = [
+  {
+    icon: "⚜️",
+    text: "Working on the Frontend, interested in all kinds of tech",
+  },
+  { icon: "⚜️", text: "Always ready to put in the work - both smart & hard" },
+];
+
 ```
+
+and so on...
 
     3. Save the file, and your changes will reflect on the site.
 
@@ -185,13 +189,29 @@ This template is optimized for deployment on platforms like Vercel, Netlify, or 
     4. Set the environment variables (e.g., SMTP_HOST, SMTP_USER) in the Vercel project settings.
     5. Deploy your site with a single click.
 
-## 🛠 Contributing
+## 🛠 Contributing & Usage
 
-Feel free to contribute to this project by:
+### Contributing
 
-    1. Forking the repository.
-    2. Creating a new branch for your feature or fix.
-    3. Making your changes and submitting a pull request.
+I welcome contributions to improve this project! Here's how you can get involved:
+
+    Fork the Repository: Create your own copy of the project by forking the repository.
+    Create a New Branch: Work on your feature or fix in a separate branch.
+
+```
+    git checkout -b feature/your-feature-name
+```
+
+    Make Your Changes: Implement your improvements or fixes.
+    Submit a Pull Request: Once your changes are ready, open a pull request with a description of what you’ve done.
+
+### Usage as a Template
+
+If you'd like to use this as the starting point for your portfolio, simply fork the repository and customize it to fit your needs. The template is designed to be highly customizable, so you can quickly adapt it to showcase your own projects.
+
+Important: If you use this template, a mention or attribution to this repository would be greatly appreciated! 😊
+
+If you like this work, I would be very greatful for a ⭐️ Github Star ⭐️
 
 ## 🖤 License
 
