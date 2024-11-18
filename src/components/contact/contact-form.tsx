@@ -23,13 +23,43 @@ import {
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
+    setError(null);
+
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    // Create form data to send in the request
+    const formData = { name, email, message };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset(); // Reset the form after successful submission
+      } else {
+        throw new Error(result.message || "Something went wrong");
+      }
+    } catch (err) {
+      setError(err.message || "Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -54,7 +84,11 @@ export default function ContactForm() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form
+                id="contact-form"
+                onSubmit={handleSubmit}
+                className="space-y-4"
+              >
                 <div className="space-y-2">
                   <Label htmlFor="name" className="text-purple-200">
                     Name
